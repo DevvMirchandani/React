@@ -1,8 +1,15 @@
+import Chai from "./chai"
+
 
 function App() {
   
   return (
-    <h1>Chai aur React with vite | Dev Mirchandani</h1>
+    <>          {/* fragments, and also this is the way to write comments in jsx file*/}    
+    <Chai />   
+    <h1>Chai Aur React</h1>
+    <p>test para</p>
+    </>
+    
   )
 }
 
