@@ -1,15 +1,30 @@
-import { useState } from 'react'
+import { useState } from 'react'         // for using hooks 
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
+
+  let [counter, setCounter] = useState(15)   // way to use hooks, hooks simply updates all the variables at one time 
   
-  let counter = 15
+  // let counter = 15
 
   const addValue = () => {
-    console.log("clicked", counter)
-    counter = counter + 1
+    // counter = counter + 1
+    if(counter >= 20){
+      console.log("oops! can't go above 20")
+    }else {
+      setCounter(counter + 1)
+    }
+    
+  }
+
+  const removeValue = () => {
+    if(counter <= 0){
+      console.log("oops! can't go below 0")
+    }else {
+      setCounter(counter - 1)
+    }
   }
 
   return (
@@ -19,7 +34,7 @@ function App() {
 
       <button onClick={addValue}>Add value {counter}</button>
       <br />
-      <button>Remove value {counter}</button>
+      <button onClick={removeValue}>Remove value {counter}</button>
       <p>footer : {counter}</p>
     </>
   )
