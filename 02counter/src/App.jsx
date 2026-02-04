@@ -5,8 +5,9 @@ import './App.css'
 
 function App() {
 
-  let [counter, setCounter] = useState(15)   // way to use hooks, hooks simply updates all the variables at one time 
-  
+  let [counter, setCounter] = useState(15)   // way to use hooks
+  // if not using hooks , the value will be changed but not in the UI  
+  // hooks simply updates all the variables at one time in the UI
   // let counter = 15
 
   const addValue = () => {
